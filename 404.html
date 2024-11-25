@@ -1,4 +1,9 @@
 <script>
-    // Automatyczne przekierowanie na główny plik index.html
-    window.location.replace('/index.html');
+    // Pobieramy aktualny adres URL
+    const currentPath = window.location.pathname;
+    
+    // Przekierowujemy użytkownika na stronę główną bez dodawania `/index.html`
+    if (currentPath !== '/' && currentPath !== '/index.html') {
+      window.location.replace('/');
+    }
   </script>
